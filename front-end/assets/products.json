@@ -1,0 +1,337 @@
+[{
+  "_id": {
+    "$oid": "639233d6f54d42d769315eb2"
+  },
+  "nameProduct": "Pacamara El Salvador",
+  "desc": "About the Pacamara coffee variety, this is a hybrid Arabica coffee variety developed by the El Salvador Coffee Institute (ISIC) since the late 50s of the 20th century. Pacamara is a cross between the large-seeded Maragogype (also known as the large-seeded Maragogype variety (also known as the large-seeded Maragogype variety). is elephant coffee) and Pacas, a Salvadoran mutant high yielding coffee from the Bourbon (American Arabica) variety, known as San Ramón Bourbon. Pacas was discovered in 1956 by Salvadoran producer Don Alberto Pacas. Pacamara has since expanded to other growing sites in Central America and Africa.",
+  "image": "https://firebasestorage.googleapis.com/v0/b/shop-4122b.appspot.com/o/1670525908114a_img_product_1.webp?alt=media&token=b59cc9c1-b528-4cee-9fbc-87d33da8394e",
+  "price": 12,
+  "weight": "200g",
+  "category": [
+    "arabica"
+  ],
+  "inStock": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670525910799"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670525910799"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63923b37f54d42d769315ef1"
+  },
+  "nameProduct": "Colombia Buesaco Narino",
+  "desc": "Roasted specialty coffee beans Colombia Buesaco Narino - Regional Cofinet roasted by Stupiducks suitable for most Espresso, Hard filter, V60, Chemex, Frence Press, Aeropress, Moka pot, Protarfiler, Nanopresso, Cold brew, Cold brew methods drip, Vietnam Phin...",
+  "image": "https://firebasestorage.googleapis.com/v0/b/shop-4122b.appspot.com/o/1670527798065a_img_product_2.webp?alt=media&token=02e4863f-57c1-4834-a772-794f2f3a86f8",
+  "price": 9,
+  "weight": "200g",
+  "category": [
+    "arabica"
+  ],
+  "inStock": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670527799585"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670527799585"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63923ef1cf3cd229cb82e871"
+  },
+  "nameProduct": "Colombia Jairo Arcila Cinnamon - Exotics Cofinet",
+  "desc": "𝐄𝐗𝐎𝐓𝐈𝐂- \" Very few premium exotic varieties from a single producer. These batches are often exotic varieties or alternative processed coffees such as natural or honey processed, most of which are processed on site. our camp La Pradrera or follow our guide\" Roasted specialty coffee beans Colombia Jairo Arcila Cinnamon - Exotics Cofinet roasted by Stupiducks suitable for the preparation method in the form of Hard filter, V60, Chemex, Frence Press, Aeropress, Protarfiler, Cold brew, Cold drip...",
+  "image": "https://firebasestorage.googleapis.com/v0/b/shop-4122b.appspot.com/o/1670528752122a_img_product_3.webp?alt=media&token=e147fad2-332d-4b09-abb6-83e08c79e77c",
+  "price": 20,
+  "weight": "200g",
+  "category": [
+    "arabica"
+  ],
+  "inStock": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670528753484"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670528753484"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63923fe0cf3cd229cb82e875"
+  },
+  "nameProduct": "Colombia Finca El Paraiso Rum Vanilla",
+  "desc": "El Paraíso is a family activity. Diego Samuel and his family have worked together to create a range of high quality coffees with unparalleled consistency. The farm team consists of four family members and eight employees. Fertilization is based on what the plant needs. Diego and his team have developed advanced fermentation and washing techniques, such as the use of self-collected microorganisms. Diego has even developed his own eco-friendly dryer, which works on the principle of condensation. Roasted specialty coffee beans Colombia Finca El Paraiso Rum Vanilla roasted by Stupiducks suitable for most Espresso, Hard filter, V60, Chemex, Frence Press, Aeropress, Moka pot, Protarfiler, Nanopresso, Cold brew, Cold brew methods drip, Vietnam Phi...",
+  "image": "https://firebasestorage.googleapis.com/v0/b/shop-4122b.appspot.com/o/1670528990057a_img_product_4.webp?alt=media&token=cfda8090-6197-49ff-869b-50e7ad1ba55b",
+  "price": 15,
+  "weight": "200g",
+  "category": [
+    "arabica"
+  ],
+  "inStock": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670528992767"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670528992767"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63924147cf3cd229cb82e880"
+  },
+  "nameProduct": "Colombia Coffee - Country Blend Series - Stupiducks Specialty Coffee",
+  "desc": "Colombian coffee is famous for its lightness and balance with modern improvements in coffee processing, Colombia is gradually gaining a foothold and personality for its coffee.  The Colombian Coffee Package at Stupiducks in the Country Blend Series is 100% Colombian grown coffee. Colombian coffee is mainly made up of premium arabica varieties (Caturra and Castillo). Colombian coffee can be chocolatey and floral and fruity.",
+  "image": "https://firebasestorage.googleapis.com/v0/b/shop-4122b.appspot.com/o/1670529349257a_img_product_6.webp?alt=media&token=4b4cc65e-553f-4cd6-b310-b53fa5e2805c",
+  "price": 9,
+  "weight": "200g",
+  "category": [
+    "arabica"
+  ],
+  "inStock": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670529351894"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670529351894"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63924233cf3cd229cb82e88a"
+  },
+  "nameProduct": "Colombia El Paraiso Midnight Jasmine - Stupiducks Specialty Coffee",
+  "desc": "Finca El Paraïso, from Ernedis Rodriguez is a beautiful farmhouse about 12 kilometers east of the town of Gigante in Huila. This farm, \"The Paradise\", is located exactly on the top of a mountain with most of the fields facing west towards the beautiful Magdalena River valley. The farm covers a total of 14 hectares, with the abundance of Caturra, but also 7 hectares that are still part of the Nature Reserve. Roasted specialty coffee beans Colombia El Paraiso Midnight Jasmine roasted by Stupiducks suitable for most Espresso, Hard filter, V60, Chemex, Frence Press, Aeropress, Moka pot, Protarfiler, Nanopresso, Cold brew, Cold drip methods , Vietnam Phi...",
+  "image": "https://firebasestorage.googleapis.com/v0/b/shop-4122b.appspot.com/o/1670529584688a_img_product_7.webp?alt=media&token=ea195e9e-f11b-4acd-b93c-865934d2a404",
+  "price": 17,
+  "weight": "200g",
+  "category": [
+    "arabica"
+  ],
+  "inStock": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670529587329"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670529587329"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "639244afcf3cd229cb82e89d"
+  },
+  "nameProduct": "Kenya Coffee - Country Blend Series",
+  "desc": "Roasted Coffee Beans Specialty Coffee Kenya Coffee - Country Blend Series - Stupiducks Specialty Coffee With coffee beans sourced 100% from Kenya, Africa. Our Kenya Coffee is a perfectly balanced sweet, high acidity and bright coffee. Rising above vast deserts, grassy plains and ancient lava flows, Kenya's mountains are famous for growing some of the world's most prized coffee. For this delicate blend, we started with coffee from Kenya Light roasted and then created its bright sweetness with a roast profile that extends further to Medium. Every mouth-watering sip reveals flavors of tropical fruit and brown sugar. Roasted specialty coffee beans Kenya Coffee - Country Blend Series roasted by Stupiducks suitable for most Espresso, Hard filter, V60,",
+  "image": "https://firebasestorage.googleapis.com/v0/b/shop-4122b.appspot.com/o/1670530220824a_img_product_8.webp?alt=media&token=2ebb801f-249c-4f58-9988-5d3254f8e6d1",
+  "price": 8,
+  "weight": "200g",
+  "category": [
+    "arabica"
+  ],
+  "inStock": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670530223866"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670530223866"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "639245aecf3cd229cb82e8aa"
+  },
+  "nameProduct": "Tự Do House Blend",
+  "desc": "Tu Do coffee package is blended from many different coffee origins from raw material regions around the world. The roast level for each type is divided into odd batches to optimize the original flavor of the coffee, then mixed together in a uniform ratio on the packages. One thing for you to experience, create and choose according to your own will is Freedom. Let's unpack our coffee and remember, the best pot of coffee is simply the one we like. Flavors: Floral, dark chocolate, sweet & fruity, nice body",
+  "image": "https://firebasestorage.googleapis.com/v0/b/shop-4122b.appspot.com/o/1670530476112a_img_product_9.webp?alt=media&token=96a4e55b-7897-4b20-99de-be1cc2099e92",
+  "price": 8,
+  "weight": "200g",
+  "category": [
+    "arabica"
+  ],
+  "inStock": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670530478446"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670530478446"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "639305456a353af602cb9521"
+  },
+  "nameProduct": "FRENCH ROAST Whole Bean Coffee",
+  "desc": "FRESHLY ROASTED COFFEE-OUR SPECIALTY- Old Brooklyn coffee beans are roasted in small batches in New York so that each pack captures the freshness and unique aromas of our blends. We also make sure to ship our coffee in air-tight, sealed bags with a valve so that you coffee stays fresh and aromatic. COLOR BAG CAN VARY - BAG CAN BE BLACK OR WHITE. FOR ALL YOUR FAVORITE MOMENTS OF THE DAY- In between our coffee selection you can find blends that better suit your balance. From sweet, to strong- we cover everything. Enjoy your coffee straight black, sip your espresso as a midday pick-me up, make your drip-brews or cold brews, or brew in your French press.",
+  "image": "https://firebasestorage.googleapis.com/v0/b/shop-4122b.appspot.com/o/1670579523777r_img_product_2.webp?alt=media&token=405bc1f2-9ba9-4011-b5b3-dad63132647b",
+  "price": 5,
+  "weight": "200g",
+  "category": [
+    "robusta"
+  ],
+  "inStock": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670579525372"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670579525372"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "639307b36a353af602cb9545"
+  },
+  "nameProduct": "Brooklyn Coffee - Roasted in New York",
+  "desc": "TASTING NOTES: Often describes as having a charred or almost burnt taste with a bold smokey sweet undertone. FRESHER THAN FRESH : For excellent quality, we only roast small batches here in New York, one of the country's most prolific coffee cities. Experience the goodness of daily roasted beans packed in air-tight, sealed bags with a one-way valve, allowing CO2 to escape out of the bag while preventing oxygen from getting into the bag.",
+  "image": "https://firebasestorage.googleapis.com/v0/b/shop-4122b.appspot.com/o/1670580144649r_img_product_3.webp?alt=media&token=6744d6c2-6a5a-485a-ab95-05e784f83809",
+  "price": 6,
+  "weight": "200g",
+  "category": [
+    "robusta"
+  ],
+  "inStock": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670580147358"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670580147358"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "639309486a353af602cb954c"
+  },
+  "nameProduct": "Robusta Culi",
+  "desc": " Robusta coffee combines with Culi coffee to create a premium delicious taste yet full of charm. Coffee Brewing Instructions: - Pre-heat the cup and coffee filter with hot water. - Put 3 - 4 tablespoons of coffee (about 15 - 20g) into Phin filter. Gently shake the Phin filter to help the coffee surface even. Put the damper on top of coffee and press it slightly. - Pour 25ml of boiling water in the filter to make coffee. - Fill the filter with 45ml of boiling water. Place the lid on top. It takes about 5 minutes to have a cup of coffee. - Add milk or sugar if desired. Enjoy!",
+  "image": "https://firebasestorage.googleapis.com/v0/b/shop-4122b.appspot.com/o/1670580549895r_img_product_4.webp?alt=media&token=bf25da9d-4bd1-4d24-b498-24e27891c010",
+  "price": 6,
+  "weight": "500g",
+  "category": [
+    "robusta"
+  ],
+  "inStock": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670580552552"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670580552552"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63930a536a353af602cb9556"
+  },
+  "nameProduct": "Royal Coffee",
+  "desc": "Description: Royal Coffee is produced from carefully selected coffee beans and manufactured with modern technology. After brewing, the product has a deep cockroach- brown color with pleasant aroma, special bitter taste of Vietnamese coffee. Coffee Brewing Instructions: - Pre-heat the cup and coffee filter with hot water. - Put 3 - 4 tablespoons of coffee (about 15 - 20g) into Phin filter. Gently shake the Phin filter to help the coffee surface even. Put the damper on top of coffee and press it slightly. - Pour 25ml of boiling water in the filter to make coffee. - Fill the filter with 45ml of boiling water. Place the lid on top. It takes about 5 minutes to have a cup of coffee. - Add milk or sugar if desired. Enjoy!",
+  "image": "https://firebasestorage.googleapis.com/v0/b/shop-4122b.appspot.com/o/1670580817327r_img_product_5.webp?alt=media&token=936a2a4f-2b63-4ff5-9233-37e0cb728f06",
+  "price": 4,
+  "weight": "200g",
+  "category": [
+    "robusta"
+  ],
+  "inStock": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670580819935"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670580819935"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63930b166a353af602cb955f"
+  },
+  "nameProduct": "Robusta Ground Coffee",
+  "desc": "A cult favorite in Vietnam and the USA, Bach creates only pure, natural coffees, in a lighter City roast that we normally see in Vietnam. This is a strong Robusta, both in flavor and caffeine. Mild chocolate tones and brown sugar notes. Excellent with milk and sugar, or sweetened condensed milk, but is also very low in acid so can be drunk black even by individuals who are sensitive to acidity. Robusta is high in body and crema and makes a fabulous espresso alone or paired with your favorite Arabica",
+  "image": "https://firebasestorage.googleapis.com/v0/b/shop-4122b.appspot.com/o/1670581012095r_img_product_6.webp?alt=media&token=4fd2c988-3288-470c-89c2-401e5234de65",
+  "price": 3,
+  "weight": "200g",
+  "category": [
+    "robusta"
+  ],
+  "inStock": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670581014619"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670581014619"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "639bd15245e216028402cdfa"
+  },
+  "nameProduct": "KongaEthiopica",
+  "desc": "Espresso",
+  "image": "https://firebasestorage.googleapis.com/v0/b/shop-4122b.appspot.com/o/1671156047187cs_1_sonhongmin.jpg?alt=media&token=60e942ce-117f-4489-999e-d6045ae1f3c3",
+  "price": 34,
+  "weight": "200g",
+  "category": [
+    "robusta"
+  ],
+  "inStock": true,
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671156050251"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671156050251"
+    }
+  },
+  "__v": 0
+}]
