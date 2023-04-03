@@ -10,6 +10,7 @@ import AddAddress from "./Component/AddAddress";
 import Profile from "./NavigationComponent/Profile";
 import ProductDetail from "./Component/ProductDetail";
 import Cart from "./NavigationComponent/Cart";
+import Checkout from "./Screens/Checkout";
 const Stack = createNativeStackNavigator();
 export default function AppNavigator() {
   return (
@@ -59,6 +60,11 @@ export default function AppNavigator() {
           options={{ headerShown: false }}
           name="ShoppingCart"
           component={Cart}
+        ></Stack.Screen>
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Checkout"
+          component={Checkout}
         ></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>

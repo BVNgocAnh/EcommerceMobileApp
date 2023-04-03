@@ -14,6 +14,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { addItemToCart, addToWishlist } from "../redux/actions/Actions";
 import useFetch from "../Hooks/useEffect";
+
 const Main = () => {
   const { data, loading, error } = useFetch("server/products");
 

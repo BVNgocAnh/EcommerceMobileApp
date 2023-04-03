@@ -4,7 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import CartItem from "../Component/CartItem";
 import CommonButton from "../Custom/CommonButton";
 import { addToWishlist, removeFromCart } from "../redux/actions/Actions";
+import { useNavigation } from "@react-navigation/native";
+
 export default function Cart() {
+  const navigation = useNavigation();
   const [cartList, setCartList] = useState([]);
   const cartData = useSelector((state) => state.cartReducer);
   const dispatch = useDispatch();
@@ -35,18 +38,18 @@ export default function Cart() {
           <Text>No Items Added in Cart</Text>
         </View>
       )}
-      {/* {cartData.length > 0 ? (
+      {cartData.length > 0 ? (
         <View style={{ marginBottom: 80 }}>
           <CommonButton
             bgColor={"black"}
             textColor={"#fff"}
             title={"CHECKOUT NOW"}
             onPress={() => {
-              console.log("Checkout");
+              navigation.navigate("Checkout");
             }}
           />
         </View>
-      ) : null} */}
+      ) : null}
     </View>
   );
 }
