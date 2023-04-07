@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const iplink = "http://192.168.1.63:3000/";
+const iplink = "http://10.85.3.101:3000/";
 
 const useFetch = (url) => {
   const [data, setData] = useState([]);

@@ -35,7 +35,7 @@ export default function Cart() {
         <View
           style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
         >
-          <Text>No Items Added in Cart</Text>
+          <Text style={{ fontSize: 20 }}>NO ITEM IN YOUR SHOPPING CART</Text>
         </View>
       )}
       {cartData.length > 0 ? (
@@ -43,7 +43,7 @@ export default function Cart() {
           <CommonButton
             bgColor={"black"}
             textColor={"#fff"}
-            title={"CHECKOUT NOW"}
+            title={"GO TO CHECKOUT"}
             onPress={() => {
               navigation.navigate("Checkout");
             }}

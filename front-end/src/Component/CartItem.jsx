@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Text, View, Image, TouchableOpacity, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 const CartItem = ({
@@ -10,14 +10,8 @@ const CartItem = ({
   isWishlist,
 }) => {
   const navigation = useNavigation();
+  const [quantity, setQuantity] = useState(1);
   return (
-    // const handleQuantity = (type) => {
-    //   if (type === "dec") {
-    //     quantity > 1 && setQuantity(quantity - 1);
-    //   } else {
-    //     setQuantity(quantity + 1);
-    //   }
-    // }
     <View style={{ flex: 1 }}>
       <TouchableOpacity
         style={styles.containerCartItem}

@@ -11,17 +11,6 @@ export default function HomeScreen() {
   const data = useSelector((state) => state);
   return (
     <View style={{ flex: 1 }}>
-      {/* {selectedTab == 0 ? (
-        <Main />
-      ) : selectedTab == 1 ? (
-        <Search />
-      ) : selectedTab == 2 ? (
-        <Cart />
-      ) : selectedTab == 3 ? (
-        <Wishlist />
-      ) : (
-        <Profile />
-      )} */}
       {selectedTab == 0 ? (
         <Main />
       ) : selectedTab == 1 ? (
@@ -31,6 +20,7 @@ export default function HomeScreen() {
       ) : (
         <Profile />
       )}
+
       <View style={styles.container}>
         <TouchableOpacity
           style={styles.navigation}

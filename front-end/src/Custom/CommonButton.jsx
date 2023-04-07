@@ -12,7 +12,7 @@ const CommonButton = ({ onPress, title, bgColor, textColor, disabled }) => {
         height: 50,
         borderRadius: 10,
         alignSelf: "center",
-        marginTop: 40,
+        marginTop: 30,
       }}
       onPress={() => {
         onPress();

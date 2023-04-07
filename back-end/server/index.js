@@ -32,7 +32,7 @@ app.use("/server/customer", Customer);
 // app.use("/server/auth", Auth);
 app.use("/server/products", Product);
 // app.use("/server/carts", Cart);
-// app.use("/server/orders", Order);
+app.use("/server/orders", Order);
 // app.use("/server/testAPI", testAPI);
 // app.use("/server/checkout", Stripe);
 app.use("/", testAPI);

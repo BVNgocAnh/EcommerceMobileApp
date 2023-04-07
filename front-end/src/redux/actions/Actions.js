@@ -12,6 +12,22 @@ export const removeFromCart = (index) => {
   };
 };
 
+export const updateQuantity = (id) => {
+  return {
+    type: "UPDATE_QUANTITY",
+    payload: id,
+  };
+};
+// export const incrementQuantity = (id) => ({
+//   type: "INCREMENT_QUANTITY",
+//   payload: id,
+// });
+
+// export const decrementQuantity = (id) => ({
+//   type: "DECREMENT_QUANTITY",
+//   payload: id,
+// });
+
 export const addToWishlist = (data) => {
   return {
     type: "ADD_TO_WISHLIST",
