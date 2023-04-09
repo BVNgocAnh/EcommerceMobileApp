@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   View,
   Text,
@@ -18,13 +18,46 @@ import CategoryList from "../Component/CategoryList";
 import { Dimensions } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import ProductItem from "../Component/ProductItem";
+import axios from "axios";
 const width = Dimensions.get("window").width / 2 - 30;
+const URL = "http://192.168.1.119:3000/server/products/";
 const Main = () => {
-  const { data, loading, error } = useFetch("server/products");
+  // const { data, loading, error } = useFetch("server/products");
   const [selectedCategory, setSelectedCategory] = useState(null);
+  // const [visible, setVisible] = useState(false);
+  const [filterData, setFilterData] = useState([]);
+  const [masterData, setMasterData] = useState([]);
+  const [searchText, setSearchText] = useState("");
   const navigation = useNavigation();
   const dispatch = useDispatch();
-  const categories = ["arabica", "robusta"];
+  useEffect(() => {
+    axios
+      .get(URL)
+      .then((responseJson) => {
+        setFilterData(responseJson.data);
+        setMasterData(responseJson.data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
+  const onSearching = (text) => {
+    if (text) {
+      const newData = masterData.filter((item) => {
+        const itemData = item.nameProduct
+          ? item.nameProduct.toUpperCase()
+          : "".toUpperCase();
+
+        const textData = text.toUpperCase();
+        return itemData.indexOf(textData) > -1;
+      });
+      setFilterData(newData);
+      setSearchText(text);
+    } else {
+      setFilterData(masterData);
+      setSearchText(text);
+    }
+  };
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#FFF" }}>
       <View style={{ flex: 1 }}>
@@ -41,7 +74,14 @@ const Main = () => {
         <View style={{ marginTop: 30, flexDirection: "row" }}>
           <View style={styles.searchContainer}>
             <Icon name="search" size={25} style={{ marginLeft: 20 }} />
-            <TextInput placeholder="Search" style={styles.input} />
+            <TextInput
+              placeholder="Search"
+              style={styles.input}
+              value={searchText}
+              onChangeText={(txt) => {
+                onSearching(txt);
+              }}
+            />
           </View>
           <View style={styles.sortBtn}>
             <TouchableOpacity>
@@ -52,7 +92,7 @@ const Main = () => {
         <CategoryList />
         <View style={{ marginTop: 15 }}>
           <FlatList
-            data={data}
+            data={filterData}
             horizontal={false}
             showsHorizontalScrollIndicator={false}
             numColumns={2}

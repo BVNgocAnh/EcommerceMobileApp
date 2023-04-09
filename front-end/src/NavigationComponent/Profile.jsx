@@ -1,7 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 export default function Profile() {
   const navigation = useNavigation();
   return (
@@ -19,9 +18,7 @@ export default function Profile() {
         source={require("../../assets/profile.jpg")}
         style={{ width: 80, height: 80, alignSelf: "center", marginTop: 30 }}
       />
-      <Text style={{ alignSelf: "center", marginTop: 20, fontSize: 18 }}>
-        DORAEMON
-      </Text>
+      <Text style={{ alignSelf: "center", marginTop: 20, fontSize: 18 }}></Text>
       <TouchableOpacity
         style={styles.info}
         onPress={() => {
@@ -30,7 +27,12 @@ export default function Profile() {
       >
         <Text>My Address</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.info}>
+      <TouchableOpacity
+        style={styles.info}
+        onPress={() => {
+          navigation.navigate("Order");
+        }}
+      >
         <Text>My Orders</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.info}>

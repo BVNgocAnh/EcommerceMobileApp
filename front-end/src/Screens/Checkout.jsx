@@ -14,6 +14,7 @@ import ItemCheckout from "../Component/ItemCheckout";
 import CommonButton from "../Custom/CommonButton";
 import { useNavigation } from "@react-navigation/native";
 import HomeScreen from "./HomeScreen";
+import { removeFromCart } from "../redux/actions/Actions";
 const Checkout = () => {
   const navigation = useNavigation();
   const cartData = useSelector((state) => state.cartReducer);
@@ -21,7 +22,8 @@ const Checkout = () => {
   const [selectedCart, setSelectedCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [selectedAll, setSelecteddAll] = useState(false);
-
+  const dispatch = useDispatch();
+  console.log(listCart);
   const handleFilterData = (data) => {
     const filterData = data.filter((value) => {
       return value.selected;
@@ -245,7 +247,7 @@ const Checkout = () => {
         <View>
           <FlatList
             data={listCart}
-            renderItem={({ item }) => {
+            renderItem={({ item, index }) => {
               return (
                 <ItemCheckout
                   data={item}
@@ -380,7 +382,8 @@ const styles = StyleSheet.create({
   },
 
   iconPlus: {
-    color: "green",
+    color: "red",
+
     fontWeight: "600",
   },
 });

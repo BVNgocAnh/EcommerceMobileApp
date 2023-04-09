@@ -13,6 +13,7 @@ import Cart from "./NavigationComponent/Cart";
 import Checkout from "./Screens/Checkout";
 import PaymentSuccess from "./Screens/PaymentSuccess";
 import Main from "./NavigationComponent/Main";
+import Order from "./Screens/Order";
 const Stack = createNativeStackNavigator();
 export default function AppNavigator() {
   return (
@@ -72,6 +73,11 @@ export default function AppNavigator() {
           options={{ headerShown: false }}
           name="PaymentSuccess"
           component={PaymentSuccess}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Order"
+          component={Order}
         />
       </Stack.Navigator>
     </NavigationContainer>

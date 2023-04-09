@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
+import useFetch from "../Hooks/useEffect";
 const CategoryList = () => {
+  const { data, loading, error } = useFetch("server/products");
   const [categoryIndex, setCategoryIndex] = useState(0);
   const categories = ["arabica", "robusta"];
+  console.log(data);
   return (
     <View style={styles.categoryContainer}>
       {categories.map((item, index) => (

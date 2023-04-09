@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
-const ItemCheckout = ({ data, onCheckItem, addQuantity, reduceQuantity }) => {
+const ItemCheckout = ({
+  data,
+  onCheckItem,
+  addQuantity,
+  reduceQuantity,
+  onRemoveItem,
+}) => {
   const cartData = useSelector((state) => state.cartReducer);
   const { image, nameProduct, category, price, selected, quantity } =
     data || {};
@@ -22,6 +28,7 @@ const ItemCheckout = ({ data, onCheckItem, addQuantity, reduceQuantity }) => {
               fontSize: 16,
               fontWeight: "450",
               textTransform: "capitalize",
+              flexDirection: "row",
             }}
           >
             {category}
@@ -41,7 +48,7 @@ const ItemCheckout = ({ data, onCheckItem, addQuantity, reduceQuantity }) => {
             style={styles.buttonQuantity}
             onPress={reduceQuantity}
           >
-            <Text style={{ color: "#FFF" }}>-</Text>
+            <Text style={{ color: "#FFF", fontWeight: "600" }}>-</Text>
           </TouchableOpacity>
           <Text style={{ marginLeft: 10 }}>{quantity}</Text>
           <TouchableOpacity style={styles.buttonQuantity} onPress={addQuantity}>
@@ -65,7 +72,7 @@ const styles = StyleSheet.create({
   },
   containerButton: {
     flexDirection: "row",
-    paddingLeft: 170,
+    paddingLeft: 190,
   },
   buttonQuantity: {
     backgroundColor: "black",
@@ -90,6 +97,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginLeft: 7,
   },
+
   productImage: {
     width: 80,
     height: 80,
@@ -107,7 +115,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   iconPlus: {
-    color: "green",
+    color: "red",
     fontWeight: "600",
   },
 
@@ -139,10 +147,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginRight: 10,
-  },
-
-  iconPlus: {
-    color: "green",
-    fontWeight: "600",
   },
 });

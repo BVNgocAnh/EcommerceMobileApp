@@ -9,27 +9,6 @@ const cartReducer = (state = [], action) => {
       });
       return deleteItemCart;
 
-    case "UPDATE_QUANTITY":
-
-    // case "INCREMENT_QUANTITY":
-    //   return {
-    //     ...state,
-    //     state: state.map((item) =>
-    //       item.id === action.payload.id
-    //         ? { ...item, quantity: item.quantity + 1 }
-    //         : item
-    //     ),
-    //   };
-
-    // case "DECREMENT_QUANTITY":
-    //   return {
-    //     ...state,
-    //     state: state.map((item) =>
-    //       item.id === action.payload.id
-    //         ? { ...item, quantity: item.quantity + 1 }
-    //         : item
-    //     ),
-    //   };
     default:
       return state;
   }

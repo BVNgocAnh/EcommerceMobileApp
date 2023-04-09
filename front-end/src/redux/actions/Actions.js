@@ -18,15 +18,6 @@ export const updateQuantity = (id) => {
     payload: id,
   };
 };
-// export const incrementQuantity = (id) => ({
-//   type: "INCREMENT_QUANTITY",
-//   payload: id,
-// });
-
-// export const decrementQuantity = (id) => ({
-//   type: "DECREMENT_QUANTITY",
-//   payload: id,
-// });
 
 export const addToWishlist = (data) => {
   return {
@@ -55,3 +46,12 @@ export const deleteAddress = (index) => {
     payload: index,
   };
 };
+
+export const addOrder = (data) => ({
+  type: "ADD_ORDER",
+  payload: data,
+});
+export const deleteOrder = (index) => ({
+  type: "DELETE_ORDER",
+  payload: index,
+});
