@@ -5,44 +5,47 @@ import Loader from "../Custom/Loader";
 import CommonButton from "../Custom/CommonButton";
 import { useNavigation } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-export default function Login() {
-  const navigation = useNavigation();
+import { useContext } from "react";
+import { AuthContext } from "../context/authContext";
+
+export default function Login({ navigation }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [badUsername, setBadUsername] = useState(false);
   const [badPassword, setBadPassword] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
+  const { login } = useContext(AuthContext);
 
-  const login = () => {
-    setModalVisible(true);
-    if (username == "") {
-      setBadUsername(true);
-      setModalVisible(false);
-    } else {
-      setBadUsername(false);
-    }
-    if (password == "") {
-      setBadPassword(true);
-      setModalVisible(false);
-    } else {
-      setTimeout(() => {
-        setBadPassword(false);
-        getData();
-      }, 2000);
-    }
-  };
+  // const checkPasswordValidity = (value) => {
+  //   const isNonWhiteSpace = /^\S*$/;
+  //   if (!isNonWhiteSpace.test(value)) {
+  //     return "Password must not contain Whitespaces.";
+  //   }
 
-  const getData = async () => {
-    const mUsername = await AsyncStorage.getItem("USERNAME");
-    const mPassword = await AsyncStorage.getItem("PASSWORD");
-    console.log(mUsername, mPassword);
-    if (username === mUsername && password === mPassword) {
-      setModalVisible(false);
-      navigation.navigate("HomeScreen");
-    } else {
-      setModalVisible(false);
-    }
-  };
+  //   const isContainsUppercase = /^(?=.*[A-Z]).*$/;
+  //   if (!isContainsUppercase.test(value)) {
+  //     return "Password must have at least one Uppercase Character.";
+  //   }
+
+  //   const isContainsLowercase = /^(?=.*[a-z]).*$/;
+  //   if (!isContainsLowercase.test(value)) {
+  //     return "Password must have at least one Lowercase Character.";
+  //   }
+
+  //   const isContainsNumber = /^(?=.*[0-9]).*$/;
+  //   if (!isContainsNumber.test(value)) {
+  //     return "Password must contain at least one Digit.";
+  //   }
+
+  //   const isValidLength = /^.{8,16}$/;
+  //   if (!isValidLength.test(value)) {
+  //     return "Password must be 8-16 Characters Long.";
+  //   }
+
+  //   return null;
+  // };
+
+  console.log(username, password);
   return (
     <View style={{ flex: 1, backgroundColor: "#FFF" }}>
       <Image style={styles.image} source={require("../../assets/logo.png")} />
@@ -55,9 +58,9 @@ export default function Login() {
           setUsername(txt);
         }}
       />
-      {badUsername === true && (
+      {/* {badUsername === true && (
         <Text style={styles.noti}> Please enter your username.</Text>
-      )}
+      )} */}
       <InputTextCustom
         type={"password"}
         placeholder={"Enter password"}
@@ -67,15 +70,15 @@ export default function Login() {
           setPassword(txt);
         }}
       />
-      {badPassword === true && (
+      {/* {badPassword === true && (
         <Text style={styles.noti}> Please enter your password.</Text>
-      )}
+      )} */}
       <CommonButton
         title={"Login"}
         bgColor={"#000"}
         textColor={"#fff"}
         onPress={() => {
-          login();
+          login(username, password);
         }}
       />
       <Text

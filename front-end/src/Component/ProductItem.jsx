@@ -5,7 +5,6 @@ import { Dimensions } from "react-native";
 const width = Dimensions.get("window").width / 2 - 30;
 const ProductItem = ({ item, onAddToCart, onAddToWishlist }) => {
   const navigation = useNavigation();
-
   return (
     <TouchableOpacity
       activeOpacity={0.8}

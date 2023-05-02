@@ -4,7 +4,6 @@ const CustomerSchema = new mongoose.Schema(
   {
     nameCus: {
       type: String,
-      required: true,
     },
     image: {
       type: String,
@@ -14,11 +13,9 @@ const CustomerSchema = new mongoose.Schema(
     },
     phoneCus: {
       type: String,
-      required: true,
     },
     addressCus: {
       type: String,
-      required: true,
     },
     emailCus: {
       type: String,

@@ -14,72 +14,40 @@ import Checkout from "./Screens/Checkout";
 import PaymentSuccess from "./Screens/PaymentSuccess";
 import Main from "./NavigationComponent/Main";
 import Order from "./Screens/Order";
+import { useContext } from "react";
+import { AuthContext } from "./context/authContext";
 const Stack = createNativeStackNavigator();
-export default function AppNavigator() {
+const Navigation = () => {
+  const { userInfo, isLoading } = useContext(AuthContext);
+
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          options={{ headerShown: false }}
-          name="Splash"
-          component={Splash}
-        />
-        <Stack.Screen
-          options={{ headerShown: false }}
-          name="Login"
-          component={Login}
-        />
-        <Stack.Screen
-          options={{ headerShown: false }}
-          name="Signup"
-          component={Signup}
-        />
-        <Stack.Screen
-          options={{ headerShown: false }}
-          name="HomeScreen"
-          component={HomeScreen}
-        />
-        <Stack.Screen
-          options={{ headerShown: false }}
-          name="Profile"
-          component={Profile}
-        />
-        <Stack.Screen
-          options={{ headerShown: false }}
-          name="MyAddress"
-          component={MyAddress}
-        />
-        <Stack.Screen
-          options={{ headerShown: false }}
-          name="AddAddress"
-          component={AddAddress}
-        />
-        <Stack.Screen
-          options={{ headerShown: false }}
-          name="ProductDetail"
-          component={ProductDetail}
-        />
-        <Stack.Screen
-          options={{ headerShown: false }}
-          name="ShoppingCart"
-          component={Cart}
-        />
-        <Stack.Screen
-          options={{ headerShown: false }}
-          name="Checkout"
-          component={Checkout}
-        />
-        <Stack.Screen
-          options={{ headerShown: false }}
-          name="PaymentSuccess"
-          component={PaymentSuccess}
-        />
-        <Stack.Screen
-          options={{ headerShown: false }}
-          name="Order"
-          component={Order}
-        />
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <>
+          {/* userInfo.token == null */}
+          {userInfo.token == null ? (
+            <>
+              <Stack.Screen name="Login" component={Login} />
+              <Stack.Screen name="Signup" component={Signup} />
+            </>
+          ) : (
+            <>
+              <Stack.Screen name="HomeScreen" component={HomeScreen} />
+              <Stack.Screen name="Splash" component={Splash} />
+              <Stack.Screen name="Profile" component={Profile} />
+              <Stack.Screen name="MyAddress" component={MyAddress} />
+              <Stack.Screen name="AddAddress" component={AddAddress} />
+              <Stack.Screen name="ProductDetail" component={ProductDetail} />
+              <Stack.Screen name="ShoppingCart" component={Cart} />
+              <Stack.Screen name="Checkout" component={Checkout} />
+              <Stack.Screen name="PaymentSuccess" component={PaymentSuccess} />
+              <Stack.Screen name="Order" component={Order} />
+            </>
+          )}
+        </>
       </Stack.Navigator>
     </NavigationContainer>
   );
-}
+};
+
+export default Navigation;

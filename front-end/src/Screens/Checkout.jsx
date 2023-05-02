@@ -15,15 +15,18 @@ import CommonButton from "../Custom/CommonButton";
 import { useNavigation } from "@react-navigation/native";
 import HomeScreen from "./HomeScreen";
 import { removeFromCart } from "../redux/actions/Actions";
+import { addOrder } from "../redux/actions/Actions";
 const Checkout = () => {
   const navigation = useNavigation();
   const cartData = useSelector((state) => state.cartReducer);
+  const addressList = useSelector((state) => state.addressReducer);
   const [listCart, setListCart] = useState(cartData);
   const [selectedCart, setSelectedCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [selectedAll, setSelecteddAll] = useState(false);
+  const [selectedAddress, setSelectedAddress] = useState("");
   const dispatch = useDispatch();
-  console.log(listCart);
+  // console.log(listCart);
   const handleFilterData = (data) => {
     const filterData = data.filter((value) => {
       return value.selected;
@@ -260,6 +263,59 @@ const Checkout = () => {
           />
         </View>
       </View>
+      <View style={styles.chooseAddress}>
+        <FlatList
+          data={addressList}
+          renderItem={({ item, index }) => {
+            return (
+              <TouchableOpacity>
+                <View style={styles.addressItem}>
+                  <View>
+                    <Text style={{ marginLeft: 20 }}>
+                      {"Name: " + item.username}
+                    </Text>
+                    <Text style={{ marginLeft: 20 }}>
+                      {"Mobilephone: " + item.mobilephone}
+                    </Text>
+                    <Text style={{ marginLeft: 20 }}>
+                      {"Province/City: " + item.cityLoca}
+                    </Text>
+                    <Text style={{ marginLeft: 20 }}>
+                      {"Street: " + item.streetLoca}
+                    </Text>
+                  </View>
+                  <TouchableOpacity
+                    style={{ borderWidth: 0.2, padding: 7, marginRight: 20 }}
+                    onPress={() => {
+                      setSelectedAddress(
+                        "Name: " +
+                          item.username +
+                          "" +
+                          "Mobilephone: " +
+                          item.mobilephone +
+                          "" +
+                          "Province/City: " +
+                          item.cityLoca +
+                          "" +
+                          "Street: " +
+                          item.streetLoca
+                      );
+                    }}
+                  >
+                    <Text>Select address</Text>
+                  </TouchableOpacity>
+                </View>
+              </TouchableOpacity>
+            );
+          }}
+        />
+      </View>
+      <Text style={{ margin: 20, fontSize: 18 }}>Select Address</Text>
+      <Text style={{ marginLeft: 20, fontSize: 16 }}>
+        {selectedAddress == ""
+          ? "Please Select Address From Above List"
+          : selectedAddress}
+      </Text>
       <View style={styles.footer}>
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           <TouchableOpacity style={styles.button} onPress={handleSelectedAll}>
@@ -273,6 +329,13 @@ const Checkout = () => {
         <TouchableOpacity
           style={[styles.buttonCheckout, { backgroundColor: "orange" }]}
           onPress={() => {
+            dispatch(
+              addOrder({
+                items: cartData,
+                total: handleCaltulatePrice(),
+                address: selectedAddress,
+              })
+            );
             navigation.navigate("PaymentSuccess");
           }}
         >
@@ -350,7 +413,17 @@ const styles = StyleSheet.create({
     color: "green",
     fontWeight: "600",
   },
-
+  addressItem: {
+    width: "100%",
+    height: 100,
+    borderWidth: 0.5,
+    borderColor: "#8e8e8e",
+    borderBottomColor: "#000",
+    alignSelf: "center",
+    justifyContent: "space-between",
+    flexDirection: "row",
+    alignItems: "center",
+  },
   footer: {
     borderTopWidth: 0.5,
     paddingLeft: 15,

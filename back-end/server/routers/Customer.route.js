@@ -6,7 +6,7 @@ import {
 import { Customer } from "../models/Customer.model.js";
 const router = express.Router();
 
-router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {
+router.put("/:id", async (req, res) => {
   if (req.body.password) {
     const salt = bcrypt.genSaltSync(10);
     const hash = bcrypt.hashSync(req.body.password, salt);
@@ -28,7 +28,7 @@ router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {
 });
 
 //DELETE
-router.delete("/:id", verifyTokenAndAuthorization, async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
     await Customer.findByIdAndDelete(req.params.id);
     res.status(200).json("Customer has been deleted!");
@@ -63,7 +63,7 @@ router.get("/", async (req, res) => {
 
 //GET CUSTOMER STATS (Quantity customer on a month)
 
-router.get("/stats", verifyTokenAndAdmin, async (req, res) => {
+router.get("/stats", async (req, res) => {
   const date = new Date();
   const lastYear = new Date(date.setFullYear(date.getFullYear() - 1));
   try {

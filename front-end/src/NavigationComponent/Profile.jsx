@@ -1,8 +1,25 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  Image,
+  Button,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import CommonButton from "../Custom/CommonButton";
+import { useContext } from "react";
+import { AuthContext } from "../context/authContext";
+
 export default function Profile() {
+  const userInfo = useContext(AuthContext);
+  const { logout } = useContext(AuthContext);
   const navigation = useNavigation();
+  const handleLogout = () => {
+    logout();
+  };
   return (
     <View style={{ flex: 1 }}>
       <View style={styles.Profile}>
@@ -18,7 +35,9 @@ export default function Profile() {
         source={require("../../assets/profile.jpg")}
         style={{ width: 80, height: 80, alignSelf: "center", marginTop: 30 }}
       />
-      <Text style={{ alignSelf: "center", marginTop: 20, fontSize: 18 }}></Text>
+      <Text style={{ alignSelf: "center", marginTop: 20, fontSize: 18 }}>
+        {userInfo.userInfo.emailCus}
+      </Text>
       <TouchableOpacity
         style={styles.info}
         onPress={() => {
@@ -35,9 +54,16 @@ export default function Profile() {
       >
         <Text>My Orders</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.info}>
-        <Text>Offers</Text>
-      </TouchableOpacity>
+      <View style={styles.buttonLogout}>
+        <CommonButton
+          bgColor={"black"}
+          textColor={"#fff"}
+          title={"LOGOUT"}
+          onPress={() => {
+            handleLogout();
+          }}
+        />
+      </View>
     </View>
   );
 }
@@ -69,5 +95,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderBottomColor: "#8e8e8e",
     borderBottomWidth: 0.3,
+  },
+  buttonLogout: {
+    marginTop: 250,
   },
 });

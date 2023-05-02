@@ -1,10 +1,13 @@
 import express from "express";
-import { verifyTokenAndAdmin } from "../controllers/verifyToken.controller.js";
+import {
+  verifyToken,
+  verifyTokenAndAdmin,
+} from "../controllers/verifyToken.controller.js";
 import { Product } from "../models/Product.model.js";
 const router = express.Router();
 
 //Create Product
-router.post("/", verifyTokenAndAdmin, async (req, res) => {
+router.post("/", async (req, res) => {
   const newProduct = new Product(req.body);
   try {
     const savedProduct = await newProduct.save();
@@ -15,7 +18,7 @@ router.post("/", verifyTokenAndAdmin, async (req, res) => {
 });
 
 //Update Product
-router.put("/:id", verifyTokenAndAdmin, async (req, res) => {
+router.put("/:id", async (req, res) => {
   try {
     const updatedProduct = await Product.findByIdAndUpdate(
       req.params.id,
@@ -31,7 +34,7 @@ router.put("/:id", verifyTokenAndAdmin, async (req, res) => {
 });
 
 //Delete Product
-router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
     await Product.findByIdAndDelete(req.params.id);
     res.status(200).json("Product has been deleted!");

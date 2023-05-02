@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 const PaymentSuccess = () => {
   const navigation = useNavigation();
   const orderData = useSelector((state) => state.orderRecucer);
+  console.log(orderData);
   return (
     <View style={styles.container}>
       <Image

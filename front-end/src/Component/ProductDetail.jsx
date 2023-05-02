@@ -159,6 +159,9 @@ const ProductDetail = ({
         <Text style={{ fontSize: 16, fontWeight: "600", marginLeft: 20 }}>
           Weight: {item.weight}
         </Text>
+        <Text style={{ fontSize: 16, fontWeight: "600", marginLeft: 20 }}>
+          Category: {item.category}
+        </Text>
         <View style={{ paddingHorizontal: 20 }}>
           <Text
             style={{
@@ -170,7 +173,7 @@ const ProductDetail = ({
           >
             {item.desc}
           </Text>
-          <View style={styles.containerButton}>
+          {/* <View style={styles.containerButton}>
             <CommonButton
               bgColor={"black"}
               textColor={"#fff"}
@@ -179,7 +182,7 @@ const ProductDetail = ({
                 console.log("add to cart");
               }}
             />
-          </View>
+          </View> */}
         </View>
       </View>
     </ScrollView>

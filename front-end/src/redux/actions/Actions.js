@@ -55,3 +55,8 @@ export const deleteOrder = (index) => ({
   type: "DELETE_ORDER",
   payload: index,
 });
+
+export const filterCategory = (category) => ({
+  type: "FILTER_CATEGORY",
+  payload: category,
+});
